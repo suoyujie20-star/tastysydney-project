@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: tastysydney-dashboard
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn tastysydney_dashboard:server
